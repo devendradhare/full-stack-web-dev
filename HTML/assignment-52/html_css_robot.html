@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS ROBOT</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .robot_area {
+            background: #e8e8e8;
+            height: 70vh;
+            width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .robo_head{
+            background: #b4b4b4;
+            height: 100px;
+            width: 100px;
+            /* position: relative; */
+            /* top: 30px;
+            left: 33.33%; */
+            border-radius: 15px;
+        }
+        .eye1 {
+            background: #f3f3f3;
+            height: 25px;
+            width: 25px;
+            border-radius: 99px;
+            display: inline-block;
+            margin: 20% 2% 2% 15%;
+            border: 2px solid black;
+        }
+        .eye2{
+            margin-left: 10%;
+        }
+        .mouth{
+            background: #c3c3c3;
+            height: 30px;
+            width: 70%;
+            margin-left: 15%;
+            border-radius: 0 0 30px 30px;
+            display: flex;
+            overflow: hidden;
+            border: 1px solid black;
+            flex-wrap: wrap;
+        }
+        .teeths{
+            background: white;
+            height: 15px;
+            width: 12.555px;
+            border: 1px solid black;
+        }
+        .neck{
+            background: #cecaca;
+            height: 10px;
+            width: 70px;
+        }
+        .mid_part{
+            /* background: #616161; */
+            height: 250px;
+            width: 270px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .hand{
+            background: white;
+            height: 180px;
+            width: 50px;
+            border-radius: 30px;
+        }
+        .robo_body{
+            background: #969696;
+            height: 160px;
+            width: 150px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="robot_area">
+        <div class="robo_head">
+            <div class="eye1">
+
+            </div>
+            <div class="eye1 eye2" >
+
+            </div>
+            <div class="mouth">
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+                <div class="teeths"></div>
+            </div>
+        </div>
+        <div class="neck"></div>
+        <div class="mid_part">
+            <div class="hand"></div>
+            <div class="robo_body"></div>
+            <div class="hand"></div>
+        </div>
+    </div>
+</body>
+</html>
