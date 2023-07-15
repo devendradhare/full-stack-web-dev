@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show/hind an img </title>
+    <style>
+        img {
+            width: 500px;
+            border: 1px solid black;
+            /* visibility: hidden; */
+        }
+    </style>
+</head>
+
+<body>
+    <img id="image" src="assignment (56).png" alt="demo img" srcset="">
+    <input onclick="toggle_img()" type="button" value="hind image">
+
+    <script>
+        function toggle_img() {
+            img = document.getElementById("image");
+            if (img.style.visibility == "hidden")
+                img.style.visibility = "";
+            else {
+                img.style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+
+</html>
