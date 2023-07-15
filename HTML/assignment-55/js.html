@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js assignment 55</title>
+</head>
+
+<body>
+
+    <!-- 1. Write a Javascript to print first 10 odd natural numbers in reverse order -->
+    <h3>1. Write a Javascript to print first 10 odd natural numbers in reverse order</h3>
+    <script>
+        for (var i = 10; i >= 1; i--) {
+            document.write(i + i - 1, " ");
+        }
+    </script>
+
+
+    <!-- 2. Write a Javascript to print cubes of first 10 natural numbers. -->
+    <h3>2. Write a Javascript to print cubes of first 10 natural numbers.</h3>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write(i * i * i, " ");
+        }
+    </script>
+
+
+    <!-- 3. Write a Javascript to print first 10 even natural numbers in reverse order -->
+    <h3>3. Write a Javascript to print first 10 even natural numbers in reverse order</h3>
+    <script>
+        for (var i = 10; i >= 1; i--) {
+            document.write(i + i, " ");
+        }
+    </script>
+
+
+    <!-- 4. Write a Javascript to print a table of 5. -->
+    <h3>4. Write a Javascript to print a table of 5.</h3>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write("5 * ", i, " = ", i * 5, "<br>");
+        }
+    </script>
+
+
+    <!-- 5. Write a Javascript to print first 10 Prime numbers. -->
+    <h3>5. Write a Javascript to print first 1000 Prime numbers.</h3>
+    <script>
+        var i = 1;
+        var num = 1;
+        while (i <= 1000) {
+            for (var j = 2; j < num; j++) {
+                if (num % j == 0) {
+                    break;
+                }
+            }
+            if (j == num) {
+                document.write(num, " ");
+                i++;
+            }
+            num++;
+        }
+    </script>
+
+
+</body>
+
+</html>
