@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration from</title>
+    <style>
+        :root {
+            --main-color: #58c4ff;
+            --border-color: #ccc;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
+
+        .main_screen {
+            background: #f0f0f0;
+            height: 60vh;
+            width: 350px;
+            margin: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form_tital {
+            background: var(--main-color);
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+        }
+
+        .form_area {
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            justify-content: space-evenly;
+            padding: 0 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+
+        .form_area>label {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .courses>div {
+            margin: 0 40px;
+        }
+
+        .user_input {
+            height: 25px;
+            width: 90%;
+            border: 1px solid rgba(134, 134, 134, 0.562);
+            background: #ffffff;
+        }
+
+        .submiting {
+            height: 10%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .submiting>input {
+            width: 50%;
+            height: 100%;
+            border: 0;
+            border-radius: 0;
+            background: var(--main-color);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Design a registration form page in HTML with input fields for Username , password, -->
+    <!--    mobile number, email id, Gender (M or F using radio buttons), Courses (use check -->
+    <!--    box), and City (use combo box) -->
+    <form action="#" method="post" class="main_screen" id="my_form">
+        <div class="main_screen">
+            <div class="form_tital">
+                REGISTRATION FORM
+            </div>
+            <div class="form_area">
+
+                <label>
+                    <input class="user_input" type="text" placeholder="Username" required>
+                </label>
+                <label>
+                    <input class="user_input" type="password" name="password" placeholder="password" required>
+                </label>
+                <label>
+                    <input class="user_input" type="number" name="mobile_number" id="mobile_number"
+                        placeholder="mobile number" required>
+                </label>
+                <label>
+                    <input class="user_input" type="email" name="email" id="" placeholder="Email" required>
+                </label>
+                <label class="gender_radio">
+                    <p> GENDER </p>
+                    <input type="radio" name="gender" id="" required>M
+                    <input type="radio" name="gender" id="">F
+                </label>
+                <label class="courses" required>
+                    <p>Courses</p>
+                    <div>
+                        <input type="checkbox" name="course" id="sub1">Sub1
+                        <input type="checkbox" name="course" id="sub2">Sub2
+                        <input type="checkbox" name="course" id="sub3">Sub3
+                        <input type="checkbox" name="course" id="sub4">Sub4
+                        <input type="checkbox" name="course" id="sub5">Sub5
+                    </div>
+                </label>
+                <label>
+                    City
+                    <select name="City" id="City">
+                        <option value="bhopal">Bhopal</option>
+                        <option value="chhindwara">chhindwara</option>
+                        <option value="indor">Indore</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                </label>
+            </div>
+            <div class="submiting">
+                <input type="reset" value="reset">
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </form>
+
+    <!-- 2. Validate form data using Javascript and allow form to submit on the server only -->
+    <!--    when data is provided correctly according to the following policies -->
+    <!--       1. Username and password are mandatory fields ✅OK -->
+    <!--       2. Mobile number must have 10 digits ✅OK -->
+    <!--       3. Gender must be selected ✅OK -->
+    <!--       4. At least one of the course is selected ✅OK-->
+    <script>
+        document.getElementById("my_form").addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // for mobile number validation
+            var num = document.getElementById("mobile_number").value;
+            if (num < 999999999 || num > 9999999999+1) {
+                alert("invalid mobile number")
+                return;
+            }
+
+            // for checking at least one checkbox is checked or not
+            var checkboxes = document.getElementsByName('course');
+            var isChecked = false;
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    isChecked = true;
+                    break;
+                }
+            }
+            if (!isChecked) {
+                alert("Please check at least one checkbox.");
+                return;
+            }
+        })
+        // my_form.onsubmit((event) => {
+
+
+        // })
+    </script>
+</body>
+
+</html>
