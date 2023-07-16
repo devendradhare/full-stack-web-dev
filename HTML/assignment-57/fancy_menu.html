@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fancy Menu</title>
+    <style>
+        .menu-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu-btn {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-list {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            padding: 10px;
+            list-style-type: none;
+            margin: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-list li {
+            margin-bottom: 10px;
+        }
+
+        .menu-list a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .menu-list a:hover {
+            color: #fff;
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu-container">
+        <button class="menu-btn">Menu</button>
+        <ul class="menu-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var menuBtn = document.querySelector('.menu-btn');
+            var menuList = document.querySelector('.menu-list');
+
+            menuBtn.addEventListener('click', function () {
+                menuList.style.display = (menuList.style.display === 'none') ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
